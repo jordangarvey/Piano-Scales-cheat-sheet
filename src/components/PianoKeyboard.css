@@ -1,0 +1,127 @@
+.piano-keyboard {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.white-keys {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.white-key {
+  flex: 1;
+  height: 200px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+  border: 2px solid #333;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.white-key:hover {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #e8e8e8 100%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.white-key.active {
+  background: linear-gradient(to bottom, #e0e0e0 0%, #d0d0d0 100%);
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.white-key.highlighted {
+  background: linear-gradient(to bottom, #87CEEB 0%, #4682B4 100%);
+  color: white;
+}
+
+.black-keys {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 2;
+}
+
+.black-key {
+  position: absolute;
+  width: 8%;
+  height: 120px;
+  background: linear-gradient(to bottom, #333 0%, #000 100%);
+  border: 2px solid #000;
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.black-key:hover {
+  background: linear-gradient(to bottom, #444 0%, #222 100%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.black-key.active {
+  background: linear-gradient(to bottom, #555 0%, #333 100%);
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.black-key.highlighted {
+  background: linear-gradient(to bottom, #FFD700 0%, #FFA500 100%);
+  color: black;
+}
+
+.note-label {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.white-key .note-label {
+  color: #333;
+}
+
+.black-key .note-label {
+  color: white;
+  font-size: 12px;
+}
+
+.white-key.highlighted .note-label,
+.black-key.highlighted .note-label {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .white-key {
+    height: 150px;
+    padding-bottom: 15px;
+  }
+  
+  .black-key {
+    height: 90px;
+    width: 7%;
+    padding-bottom: 8px;
+  }
+  
+  .note-label {
+    font-size: 12px;
+  }
+  
+  .black-key .note-label {
+    font-size: 10px;
+  }
+}
