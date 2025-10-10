@@ -1,66 +1,62 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #333;
+  background: #fafafa;
+  color: #1a1a1a;
 }
 
 .App-header {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: #ffffff;
   padding: 30px;
-  color: white;
+  color: #1a1a1a;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .App-nav {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  background: #ffffff;
   padding: 20px;
   display: flex;
   justify-content: center;
   gap: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #e0e0e0;
   flex-wrap: wrap;
 }
 
 .App-nav button {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  background: transparent;
+  border: 1px solid #d0d0d0;
+  color: #546e7a;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .App-nav button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #f5f5f5;
+  border-color: #546e7a;
+  color: #1a1a1a;
 }
 
 .App-nav button.active {
-  background: rgba(255, 255, 255, 0.9);
-  color: #2c3e50;
-  border-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #1a1a2e;
+  color: #ffffff;
+  border-color: #1a1a2e;
 }
 
 .App-header h1 {
   margin: 0 0 10px 0;
   font-size: 2.5rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .App-header p {
   margin: 0;
   font-size: 1.2rem;
-  opacity: 0.9;
+  color: #546e7a;
+  font-weight: 400;
 }
 
 .App-main {
@@ -70,41 +66,45 @@
 }
 
 .keyboard-section {
-  background: white;
-  border-radius: 12px;
+  background: #ffffff;
+  border-radius: 8px;
   padding: 30px;
   margin: 20px 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   text-align: center;
+  border: 1px solid #e0e0e0;
 }
 
 .keyboard-section h2 {
-  color: #2c3e50;
+  color: #1a1a1a;
   margin-bottom: 10px;
   font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .keyboard-section p {
-  color: #7f8c8d;
+  color: #546e7a;
   margin-bottom: 30px;
   font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .current-scale-display {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
+  background: #ffffff;
+  border-radius: 8px;
   padding: 20px;
   margin: 20px 0;
   text-align: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .current-scale-display h3 {
-  color: #2c3e50;
+  color: #1a1a1a;
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

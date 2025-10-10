@@ -1,16 +1,19 @@
 .scales-theory {
   padding: 20px;
-  background: #f8f9fa;
-  border-radius: 12px;
+  background: #ffffff;
+  border-radius: 8px;
   margin: 20px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
 }
 
 .scales-theory h2 {
-  color: #2c3e50;
+  color: #1a1a1a;
   margin-bottom: 20px;
   text-align: center;
   font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .scale-controls {
@@ -29,15 +32,15 @@
 }
 
 .control-group label {
-  font-weight: bold;
-  color: #34495e;
+  font-weight: 500;
+  color: #546e7a;
   font-size: 14px;
 }
 
 .control-group select {
   padding: 10px 15px;
-  border: 2px solid #bdc3c7;
-  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
   background: white;
   font-size: 16px;
   cursor: pointer;
@@ -47,41 +50,45 @@
 
 .control-group select:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  border-color: #1a1a2e;
+  box-shadow: 0 0 0 2px rgba(26, 26, 46, 0.1);
 }
 
 .scale-info {
-  background: white;
+  background: #fafafa;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
 }
 
 .scale-info h3 {
-  color: #2c3e50;
+  color: #1a1a1a;
   margin-bottom: 10px;
   font-size: 24px;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .scale-description {
-  color: #7f8c8d;
+  color: #546e7a;
   font-style: italic;
   text-align: center;
   margin-bottom: 20px;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .scale-notes h4,
 .intervals h4,
 .key-signature h4 {
-  color: #34495e;
+  color: #1a1a1a;
   margin-bottom: 15px;
   font-size: 18px;
-  border-bottom: 2px solid #ecf0f1;
+  border-bottom: 1px solid #e0e0e0;
   padding-bottom: 5px;
+  font-weight: 500;
 }
 
 .notes-list {
@@ -96,69 +103,76 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #ecf0f1;
+  background: #ffffff;
   padding: 12px 16px;
-  border-radius: 8px;
+  border-radius: 6px;
   min-width: 60px;
   transition: transform 0.2s ease;
+  border: 1px solid #e0e0e0;
 }
 
 .note-item:hover {
-  transform: translateY(-2px);
-  background: #d5dbdb;
+  transform: translateY(-1px);
+  background: #f5f5f5;
+  border-color: #d0d0d0;
 }
 
 .note-name {
   font-size: 18px;
-  font-weight: bold;
-  color: #2c3e50;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 .scale-degree {
   font-size: 12px;
-  color: #7f8c8d;
+  color: #546e7a;
   margin-top: 4px;
+  font-weight: 400;
 }
 
 .intervals-list {
   text-align: center;
   font-size: 18px;
-  color: #34495e;
+  color: #1a1a1a;
   font-family: 'Courier New', monospace;
-  background: #ecf0f1;
+  background: #ffffff;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
 }
 
 .interval {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .key-signature {
-  background: #e8f4f8;
+  background: #f5f5f5;
   padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid #3498db;
+  border-radius: 6px;
+  border-left: 3px solid #546e7a;
 }
 
 .signature-accidentals {
   font-size: 16px;
-  color: #2c3e50;
+  color: #1a1a1a;
   font-weight: 500;
 }
 
 .theory-tips {
-  background: #fff3cd;
+  background: #fafafa;
   padding: 20px;
-  border-radius: 8px;
-  border-left: 4px solid #ffc107;
+  border-radius: 6px;
+  border-left: 3px solid #ffa726;
+  border: 1px solid #e0e0e0;
+  border-left: 3px solid #ffa726;
 }
 
 .theory-tips h4 {
-  color: #856404;
+  color: #1a1a1a;
   margin-bottom: 12px;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .theory-tips ul {
@@ -168,17 +182,17 @@
 }
 
 .theory-tips li {
-  color: #856404;
+  color: #424242;
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
 }
 
 .theory-tips li::before {
-  content: "♪";
+  content: "•";
   position: absolute;
   left: 0;
-  color: #ffc107;
+  color: #ffa726;
   font-weight: bold;
 }
 

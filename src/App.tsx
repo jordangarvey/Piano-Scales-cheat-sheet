@@ -50,7 +50,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>🎹 Piano Scales Learning App</h1>
+        <h1>Piano Scales Learning App</h1>
         <p>Learn piano keys, scales, and music theory interactively</p>
       </header>
       

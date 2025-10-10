@@ -1,16 +1,19 @@
 .circle-of-fifths-container {
-  background: white;
-  border-radius: 12px;
+  background: #ffffff;
+  border-radius: 8px;
   padding: 30px;
   margin: 20px 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   text-align: center;
+  border: 1px solid #e0e0e0;
 }
 
 .circle-of-fifths-container h2 {
-  color: #2c3e50;
+  color: #1a1a1a;
   margin-bottom: 20px;
   font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .mode-toggle {
@@ -22,23 +25,31 @@
 
 .mode-toggle button {
   padding: 10px 20px;
-  border: 2px solid #3498db;
-  background: white;
-  color: #3498db;
-  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  background: transparent;
+  color: #546e7a;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .mode-toggle button.active {
-  background: #3498db;
+  background: #1a1a2e;
   color: white;
+  border-color: #1a1a2e;
 }
 
 .mode-toggle button:hover {
-  background: #3498db;
+  background: #f5f5f5;
+  border-color: #546e7a;
+  color: #1a1a1a;
+}
+
+.mode-toggle button.active:hover {
+  background: #1a1a2e;
   color: white;
+  border-color: #1a1a2e;
 }
 
 .circle-container {
@@ -82,22 +93,24 @@
 }
 
 .key-info {
-  background: #f8f9fa;
-  border-radius: 10px;
+  background: #fafafa;
+  border-radius: 8px;
   padding: 20px;
   margin: 20px 0;
-  border: 2px solid #e9ecef;
+  border: 1px solid #e0e0e0;
 }
 
 .key-info h3 {
-  color: #2c3e50;
+  color: #1a1a1a;
   margin: 0 0 15px 0;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .signature-info {
-  color: #34495e;
+  color: #424242;
   font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .signature-info p {
@@ -105,19 +118,21 @@
 }
 
 .circle-explanation {
-  background: #e8f4f8;
-  border-radius: 10px;
+  background: #fafafa;
+  border-radius: 8px;
   padding: 20px;
   margin-top: 30px;
   text-align: left;
-  border-left: 4px solid #3498db;
+  border: 1px solid #e0e0e0;
+  border-left: 3px solid #546e7a;
 }
 
 .circle-explanation h4 {
-  color: #2c3e50;
+  color: #1a1a1a;
   margin: 0 0 15px 0;
   font-size: 1.2rem;
   text-align: center;
+  font-weight: 600;
 }
 
 .circle-explanation ul {
@@ -127,20 +142,21 @@
 }
 
 .circle-explanation li {
-  color: #34495e;
+  color: #424242;
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
   line-height: 1.4;
+  font-weight: 400;
 }
 
 .circle-explanation li::before {
-  content: "♭♯";
+  content: "•";
   position: absolute;
   left: 0;
-  color: #3498db;
+  color: #546e7a;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {

@@ -15,31 +15,32 @@
 .white-key {
   flex: 1;
   height: 200px;
-  background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
-  border: 2px solid #333;
-  border-radius: 0 0 8px 8px;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  border-radius: 0 0 4px 4px;
   cursor: pointer;
   transition: all 0.1s ease;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .white-key:hover {
-  background: linear-gradient(to bottom, #f0f0f0 0%, #e8e8e8 100%);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: #f5f5f5;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
 .white-key.active {
-  background: linear-gradient(to bottom, #e0e0e0 0%, #d0d0d0 100%);
-  transform: translateY(2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: #e0e0e0;
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .white-key.highlighted {
-  background: linear-gradient(to bottom, #87CEEB 0%, #4682B4 100%);
+  background: #00bcd4;
+  border-color: #00acc1;
   color: white;
 }
 
@@ -56,9 +57,9 @@
   position: absolute;
   width: 8%;
   height: 120px;
-  background: linear-gradient(to bottom, #333 0%, #000 100%);
-  border: 2px solid #000;
-  border-radius: 0 0 4px 4px;
+  background: #1a1a1a;
+  border: 1px solid #000000;
+  border-radius: 0 0 3px 3px;
   cursor: pointer;
   transition: all 0.1s ease;
   color: white;
@@ -66,33 +67,34 @@
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .black-key:hover {
-  background: linear-gradient(to bottom, #444 0%, #222 100%);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  background: #2d2d2d;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 .black-key.active {
-  background: linear-gradient(to bottom, #555 0%, #333 100%);
+  background: #424242;
   transform: translateY(1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .black-key.highlighted {
-  background: linear-gradient(to bottom, #FFD700 0%, #FFA500 100%);
-  color: black;
+  background: #ffa726;
+  border-color: #fb8c00;
+  color: #1a1a1a;
 }
 
 .note-label {
   font-size: 14px;
-  font-weight: bold;
-  font-family: 'Arial', sans-serif;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .white-key .note-label {
-  color: #333;
+  color: #424242;
 }
 
 .black-key .note-label {
@@ -100,9 +102,12 @@
   font-size: 12px;
 }
 
-.white-key.highlighted .note-label,
+.white-key.highlighted .note-label {
+  font-weight: 600;
+}
+
 .black-key.highlighted .note-label {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
