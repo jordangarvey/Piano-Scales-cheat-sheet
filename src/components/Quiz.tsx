@@ -102,6 +102,7 @@ const Quiz: React.FC<QuizProps> = ({ onScaleHighlight }) => {
     const cMajorScale = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
     const positions = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh'];
     const index = cMajorScale.indexOf(note);
+
     return index !== -1 ? positions[index] : 'unknown';
   };
 
