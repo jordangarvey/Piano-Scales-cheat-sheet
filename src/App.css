@@ -1,147 +1,236 @@
 .App {
   min-height: 100vh;
-  background: #fafafa;
-  color: #1a1a1a;
+  background: linear-gradient(to bottom, #f7fafc 0%, #edf2f7 100%);
 }
 
 .App-header {
-  background: #ffffff;
-  padding: 30px;
-  color: #1a1a1a;
+  background: var(--primary-gradient);
+  padding: 60px 30px;
+  color: var(--text-light);
   text-align: center;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.App-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 1;
+  z-index: 0;
+}
+
+.App-header > * {
+  position: relative;
+  z-index: 1;
 }
 
 .App-nav {
-  background: #ffffff;
-  padding: 20px;
+  background: var(--bg-card);
+  padding: 24px 20px;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-light);
   flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .App-nav button {
   background: transparent;
-  border: 1px solid #d0d0d0;
-  color: #546e7a;
-  padding: 12px 20px;
-  border-radius: 6px;
+  border: 2px solid var(--border-light);
+  color: var(--text-secondary);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.App-nav button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--primary-gradient);
+  transition: width var(--transition-base);
+  z-index: 0;
+}
+
+.App-nav button > * {
+  position: relative;
+  z-index: 1;
 }
 
 .App-nav button:hover {
-  background: #f5f5f5;
-  border-color: #546e7a;
-  color: #1a1a1a;
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .App-nav button.active {
-  background: #1a1a2e;
-  color: #ffffff;
-  border-color: #1a1a2e;
+  background: var(--primary-gradient);
+  color: var(--text-light);
+  border-color: transparent;
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.App-nav button.active::before {
+  width: 100%;
 }
 
 .App-header h1 {
-  margin: 0 0 10px 0;
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+  margin: 0 0 16px 0;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .App-header p {
   margin: 0;
-  font-size: 1.2rem;
-  color: #546e7a;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .App-main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .keyboard-section {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 30px;
-  margin: 20px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin: 30px 0;
+  box-shadow: var(--shadow-lg);
   text-align: center;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.keyboard-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-gradient);
 }
 
 .keyboard-section h2 {
-  color: #1a1a1a;
-  margin-bottom: 10px;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .keyboard-section p {
-  color: #546e7a;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
-  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+  font-size: 1.15rem;
+  font-weight: 500;
 }
 
 .current-scale-display {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  margin: 30px 0;
   text-align: center;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 2px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.current-scale-display::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--success-gradient);
 }
 
 .current-scale-display h3 {
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media (max-width: 768px) {
   .App-header {
-    padding: 20px;
+    padding: 40px 20px;
   }
-  
+
   .App-header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-  
+
   .App-header p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-  
+
   .App-nav {
-    padding: 15px;
-    gap: 8px;
+    padding: 16px;
+    gap: 10px;
   }
-  
+
   .App-nav button {
-    padding: 10px 16px;
-    font-size: 0.9rem;
+    padding: 10px 20px;
+    font-size: 14px;
     flex: 1;
     min-width: 120px;
   }
-  
+
   .App-main {
-    padding: 10px;
+    padding: 20px 10px;
   }
-  
+
   .keyboard-section {
-    padding: 20px;
-    margin: 10px 0;
+    padding: 25px;
+    margin: 20px 0;
   }
-  
+
   .keyboard-section h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
